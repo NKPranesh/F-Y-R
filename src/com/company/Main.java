@@ -69,7 +69,11 @@ class Functions
     {
         String[] names=new String[10];int count=0;
         double[] distances=new double[10];
-        File f=new File("C:\\Users\\K\\Desktop\\OOP MiniProject\\Hotels");
+
+        //------------------- Path name for hotels folder should be checked-------------------
+        File f=new File("/Users/riteshnelakosigi/Desktop/Github/Find-Your-Restaurant/Hotels");
+        //-----------------------------------------------------------------------------------------------
+
         File res=null;
         System.out.println("Restaurants near you!!");
         for(File a:f.listFiles()) {
@@ -100,7 +104,11 @@ class Functions
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter Restaurant Name");
         String name=br.readLine();
-        File f=new File("C:\\Users\\K\\Desktop\\OOP MiniProject\\Hotels");
+
+        //------------------- Path name for hotels folder should be checked-------------------
+        File f=new File("/Users/riteshnelakosigi/Desktop/Github/Find-Your-Restaurant/Hotels");
+        //-----------------------------------------------------------------------------------------------
+
         File res=null;
         for(File a:f.listFiles())
         {
@@ -296,7 +304,11 @@ class Functions
         return returnValue;
     }
     public CityMap serialize() throws IOException, ClassNotFoundException {
-        FileInputStream fis=new FileInputStream("C:\\Users\\K\\Desktop\\OOP MiniProject\\Map.txt");
+
+        //------------------- Path name for map.txt should be checked-------------------
+        FileInputStream fis=new FileInputStream("/Users/riteshnelakosigi/Desktop/Github/Find-Your-Restaurant/Map.txt");
+        //-----------------------------------------------------------------------------------------------
+
         if(fis.available()==0)
             return new CityMap();
         ObjectInputStream ois=new ObjectInputStream(fis);
@@ -307,7 +319,11 @@ class Functions
     }
     public void deserialize(CityMap cityMap) throws IOException
     {
-        FileOutputStream fos=new FileOutputStream("C:\\Users\\K\\Desktop\\OOP MiniProject\\Map.txt");
+
+        //------------------- Path name for map.txt should be checked-------------------
+        FileOutputStream fos=new FileOutputStream("/Users/riteshnelakosigi/Desktop/Github/Find-Your-Restaurant/Map.txt");
+        //-----------------------------------------------------------------------------------------------
+
         ObjectOutputStream oos=new ObjectOutputStream(fos);
         oos.writeObject(cityMap);
         oos.close();
@@ -382,7 +398,11 @@ public class Main
 {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        File accounts=new File("C:\\Users\\K\\Desktop\\OOP MiniProject\\Accounts.txt");
+
+        //------------------- Path name for accounts.txt should be checked-------------------
+        File accounts=new File("/Users/riteshnelakosigi/Desktop/Github/Find-Your-Restaurant/Accounts.txt");
+        //-----------------------------------------------------------------------------------------------
+
         String name="";
         System.out.println("Login or SignUp?");
         BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
